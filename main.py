@@ -18,29 +18,31 @@ varor = {
 total_price = 0
 
 
-#Loop (Om man vill köpa eller inte)
+#Meny
 while True :
     print ("◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎")
 
     print ("\nVälkomen till e-butik!!☺️🛍️\n")
+    print("--- MENY ---\n")
+    print("1. Visa produkter och handla")
+    print("2. Visa kundvagn och totalbelopp")
+    print("3. Betala och avsluta\n")
 
+    väl = input ("\nVälj ett altanativ 1, 2 eller 3 :")
+ 
     print ("◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎")
+ 
 
+#  1. Visa produkter och handla"  
+    
     print ("\nTillgängliga varor👞\n") 
-   
-#isa varor
+  
     for i in varor :
           print(i, varor[i]["Namn"], varor[i]["pris"], "kr")
     print ()
     print ("----------------------------------------")
-#Fråga vad kunden vill göra
  
-    print ("\nVad vill du göra?\n")
-    print ("1 : Handla ")
-    print ("2 : Avsluta och betala")
-    väl = input ("\nVälj ett altanativ 1 eller 2 :")
-    print ()
-#Väl 1: Handla
+    
     if väl == "1" :
         print ("----------------------------------------")
         print ()
@@ -56,7 +58,8 @@ while True :
             print ("\nNumret finns inte i tillgängliga varor.")
             print ("Försök igen.\n")
 
-#Väl2 :Avsluta och betala
+#2. Visa kundvagn och totalbelopp
+
     elif väl == "2" :
         print ("----------------------------------------")
         print ("\n✨Tack för ditt köp!😀✨\n")
