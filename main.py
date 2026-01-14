@@ -17,6 +17,7 @@ varor = {
 #total belpop (Börja med 0 kr)
 total_price = 0
 
+
 #Loop (Om man vill köpa eller inte)
 while True :
     print ("Välkomen till e-butik!!")
@@ -34,7 +35,12 @@ while True :
 #Väl 1: Handla
     if väl == "1" :
         varnummer= int(input ("Ange varunummer du vill köpa:"))
-        total_price += varor[varnummer]["pris"]
+        if varnummer in varor :
+            print ("Tack! Varan har lagts till i kundvagnen.")
+            total_price += varor[varnummer]["pris"]
+        else :
+            print ("Numret finns inte i tillgängliga varor.")
+            print ("Försök igen.")
 
 #Väl2 :Avsluta och betala
     elif väl == "2" :
