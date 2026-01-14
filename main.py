@@ -20,35 +20,53 @@ total_price = 0
 
 #Loop (Om man vill köpa eller inte)
 while True :
-    print ("Välkomen till e-butik!!")
-    print ("Tillgängliga varor:") 
+    print ("◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎")
+
+    print ("\nVälkomen till e-butik!!☺️🛍️\n")
+
+    print ("◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎")
+
+    print ("\nTillgängliga varor👞\n") 
+   
 #isa varor
     for i in varor :
           print(i, varor[i]["Namn"], varor[i]["pris"], "kr")
-
+    print ()
+    print ("----------------------------------------")
 #Fråga vad kunden vill göra
-    print ("Vad vill du göra?")
+ 
+    print ("\nVad vill du göra?\n")
     print ("1 : Handla ")
     print ("2 : Avsluta och betala")
-    väl = input ("Välj ett altanativ 1 eller 2 :")
-
+    väl = input ("\nVälj ett altanativ 1 eller 2 :")
+    print ()
 #Väl 1: Handla
     if väl == "1" :
+        print ("----------------------------------------")
+        print ()
         varnummer= int(input ("Ange varunummer du vill köpa:"))
+        print ("----------------------------------------")
+
         if varnummer in varor :
-            print ("Tack! Varan har lagts till i kundvagnen.")
+            print ("\nTack😁! Varan har lagts till i kundvagnen🛒✨\n")
             total_price += varor[varnummer]["pris"]
+            print ("\n💰Ditt totalbellop : ", total_price, "kr\n")
+      
         else :
-            print ("Numret finns inte i tillgängliga varor.")
-            print ("Försök igen.")
+            print ("\nNumret finns inte i tillgängliga varor.")
+            print ("Försök igen.\n")
 
 #Väl2 :Avsluta och betala
     elif väl == "2" :
-        print ("Tack för ditt köp!")
-        print ("Ditt totalbelopp är ", total_price, " kr.")
-        print ("Välkommen åter!")
+        print ("----------------------------------------")
+        print ("\n✨Tack för ditt köp!😀✨\n")
+        print ("💰Ditt totalbelopp är ", total_price, " kr.")
+        print ("Välkommen åter!\n")
+        print ("----------------------------------------")
         break
 
 #Väl3 : else
     else :
-        print("Fel! Välj nummer 1 eller 2.")
+        print ("----------------------------------------")
+        print("\nFel😭! Välj nummer 1 eller 2.\n")
+        print ("----------------------------------------")
