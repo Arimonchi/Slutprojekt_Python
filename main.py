@@ -1,6 +1,5 @@
 #E-butik systemmet 
 
-
 #"ordbok" för varor
 varor = {
     1: {"Namn": "Tröja", "pris": 520},
@@ -29,7 +28,20 @@ while True :
     print ("Vad vill du göra?")
     print ("1 : Handla ")
     print ("2 : Avsluta och betala")
-    var = input ("Välj ett altanativ : 1 eller 2")
+    väl = input ("Välj ett altanativ 1 eller 2 :")
 
-#Altanativ 1
+#Väl 1: Handla
+    if väl == "1" :
+        varnummer= int(input ("Ange varunummer du vill köpa:"))
+        total_price += varor[varnummer]["pris"]
 
+#Väl2 :Avsluta och betala
+    elif väl == "2" :
+        print ("Tack för ditt köp!")
+        print ("Ditt totalbelopp är ", total_price, " kr.")
+        print ("Välkommen åter!")
+        break
+
+#Väl3 : else
+    else :
+        print("Fel! Välj nummer 1 eller 2.")
