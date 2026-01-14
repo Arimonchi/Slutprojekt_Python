@@ -37,7 +37,6 @@ while True :
     
     if väl == "1" :
 
-        print ("1. Visa produkter och handla")
         print ("\nVåra produkter👞\n") 
   
         for i in varor :
@@ -58,19 +57,23 @@ while True :
 #2. Visa totalbelopp
        
     elif väl == "2" :
-        print ("2. Visa totalbelopp")
         print ("\n💰Ditt totalbellop : ", total_price, "kr\n")
 
-        
+
+#3. . Betala och avsluta  
+
     elif väl == "3" :
         print ("\n✨Tack för ditt köp!😀✨\n")
-        print ("💰Ditt totalbelopp är ", total_price, " kr.")
+        print ("💰Ditt totalbelopp är ", total_price, " kr.\n")
         print ("Välkommen åter!\n")
         print ("----------------------------------------")
+
         break
 
-#Väl3 : else
-    else :
+
+#else
+else :
         print ("----------------------------------------")
-        print("\nFel😭! Välj nummer 1 eller 2.\n")
+        print("\nFel😭! \n")
+        print("\nVälj nummer 1 eller 2.\n")
         print ("----------------------------------------")
