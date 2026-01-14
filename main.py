@@ -16,7 +16,6 @@ varor = {
 
 #total belpop (Börja med 0 kr)
 total_price = 0
-kundvagn = [ ]
 
 #Meny
 while True :
@@ -34,9 +33,7 @@ while True :
  
 
 #  1. Visa produkter och handla"
-    
     if väl == "1" :
-
         print ("\nVåra produkter👞\n") 
   
         for i in varor :
@@ -48,20 +45,18 @@ while True :
         if varnummer in varor :
             total_price += varor[varnummer]["pris"]
             print ("\nTack😁! Varan har lagts till i kundvagnen🛒✨\n")
-
+ 
         else :
             print ("\nNumret finns inte i tillgängliga varor.")
             print ("Försök igen.\n")
 
 
 #2. Visa totalbelopp
-       
     elif väl == "2" :
         print ("\n💰Ditt totalbellop : ", total_price, "kr\n")
 
 
 #3. . Betala och avsluta  
-
     elif väl == "3" :
         print ("\n✨Tack för ditt köp!😀✨\n")
         print ("💰Ditt totalbelopp är ", total_price, " kr.\n")
@@ -72,8 +67,8 @@ while True :
 
 
 #else
-else :
+    else :
         print ("----------------------------------------")
         print("\nFel😭! \n")
-        print("\nVälj nummer 1 eller 2.\n")
+        print("\nVälj nummer 1,2 eller ３.\n")
         print ("----------------------------------------")
