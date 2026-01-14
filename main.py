@@ -16,52 +16,53 @@ varor = {
 
 #total belpop (Börja med 0 kr)
 total_price = 0
-
+kundvagn = [ ]
 
 #Meny
 while True :
-    print ("◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎")
+    print ("-----------------------------")
 
     print ("\nVälkomen till e-butik!!☺️🛍️\n")
     print("--- MENY ---\n")
     print("1. Visa produkter och handla")
-    print("2. Visa kundvagn och totalbelopp")
+    print("2. Visa totalbelopp")
     print("3. Betala och avsluta\n")
 
     väl = input ("\nVälj ett altanativ 1, 2 eller 3 :")
  
-    print ("◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎・◼︎")
+    print ("------------------------------")
  
 
-#  1. Visa produkter och handla"  
-    
-    print ("\nTillgängliga varor👞\n") 
-  
-    for i in varor :
-          print(i, varor[i]["Namn"], varor[i]["pris"], "kr")
-    print ()
-    print ("----------------------------------------")
- 
+#  1. Visa produkter och handla"
     
     if väl == "1" :
-        print ("----------------------------------------")
-        print ()
-        varnummer= int(input ("Ange varunummer du vill köpa:"))
-        print ("----------------------------------------")
 
+        print ("1. Visa produkter och handla")
+        print ("\nVåra produkter👞\n") 
+  
+        for i in varor :
+             print(i, varor[i]["Namn"], varor[i]["pris"], "kr")
+        
+        varnummer= int(input ("Ange varunummer du vill köpa:"))
+        print ()
+        
         if varnummer in varor :
-            print ("\nTack😁! Varan har lagts till i kundvagnen🛒✨\n")
             total_price += varor[varnummer]["pris"]
-            print ("\n💰Ditt totalbellop : ", total_price, "kr\n")
-      
+            print ("\nTack😁! Varan har lagts till i kundvagnen🛒✨\n")
+
         else :
             print ("\nNumret finns inte i tillgängliga varor.")
             print ("Försök igen.\n")
 
-#2. Visa kundvagn och totalbelopp
 
+#2. Visa totalbelopp
+       
     elif väl == "2" :
-        print ("----------------------------------------")
+        print ("2. Visa totalbelopp")
+        print ("\n💰Ditt totalbellop : ", total_price, "kr\n")
+
+        
+    elif väl == "3" :
         print ("\n✨Tack för ditt köp!😀✨\n")
         print ("💰Ditt totalbelopp är ", total_price, " kr.")
         print ("Välkommen åter!\n")
