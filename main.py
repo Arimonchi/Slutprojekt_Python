@@ -22,7 +22,8 @@ while True :
     print ("Välkomen till e-butik!!")
     print ("Tillgängliga varor:") 
 #isa varor
-    print (varor)
+    for i in varor :
+          print(i, varor[i]["Namn"], varor[i]["pris"], "kr")
 
 #Fråga vad kunden vill göra
     print ("Vad vill du göra?")
