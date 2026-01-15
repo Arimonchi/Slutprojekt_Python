@@ -15,6 +15,12 @@ varor = {
     10: {"Namn": "Jeans", "pris": 980},
 }
 
+def visa_meny():
+    print("      --- MENY ---\n")
+    print("1. Visa produkter och handla")
+    print("2. Visa totalbelopp")
+    print("3. Betala och avsluta\n")
+
 
 #Kod för att visa menyn
 def visa_varor():
@@ -35,10 +41,7 @@ while True :
     print ("------------------------------")
 
     print ("\nVälkomen till e-butik!!🛍️\n")
-    print("      --- MENY ---\n")
-    print("1. Visa produkter och handla")
-    print("2. Visa totalbelopp")
-    print("3. Betala och avsluta\n")
+    visa_meny()
 
     print ("------------------------------")
 
@@ -52,7 +55,7 @@ while True :
     if val == "1" :
         visa_varor()
         print ()
-        
+
         #Add try except for att hantera ValueError
         try :
             varnummer= int(input ("Ange varunummer du vill köpa:"))
