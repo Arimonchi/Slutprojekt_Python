@@ -1,6 +1,6 @@
 #E-butik systemmet 
 
-#"ordbok" för varor
+#"ordbok" för varor _ Key (varnummer) : Value {"Inner key" : "Inner values"}
 varor = {
     1: {"Namn": "Tröja", "pris": 520},
     2: {"Namn": "Jacka", "pris": 1700},
@@ -17,7 +17,8 @@ varor = {
 #total belpop (Börja med 0 kr)
 total_price = 0
 
-#Meny
+#Huvdmeny
+#while loop : Håller systemet igång tills användaren avslutar
 while True :
     print ("------------------------------")
 
@@ -34,16 +35,18 @@ while True :
     print ("------------------------------")
  
 
-#  1. Visa produkter och handla"
+    # Val1 : Visa produkter och handla
     if val == "1" :
         print ("\n   ---Våra produkter👞---\n") 
-  
+
+        #Hämtade information från ordboken med hjälp av for
         for i in varor :
              print(i, varor[i]["Namn"], varor[i]["pris"], "kr")
         print()
         print ("------------------------------")
         print()
-        #Add try except
+
+        #Add try except for att hantera ValueError
         try :
             varnummer= int(input ("Ange varunummer du vill köpa:"))
             print ()
@@ -56,23 +59,25 @@ while True :
                 print ("\nNumret finns inte i tillgängliga varor.")
                 print ("Försök igen.\n")
 
-        except ValueError:
+        except ValueError :
             print ("------------------------------")
             print("\nFel😭! ")
             print("Du måste skriva en siffra från listan!\n")
 
 
-#2. Visa totalbelopp
+    #Val2 : Visa totalbelopp
     elif val == "2" :
         print ("\n💰Ditt totalbellop : ", total_price, "kr\n")
 
-
-#3. . Betala och avsluta  
+ 
+    #Val3 : Betala och avsluta  
     elif val == "3" :
         print ("\n✨Tack för ditt köp!😀✨\n")
         print ("💰Ditt totalbelopp är ", total_price, " kr.\n")
         print ("Välkommen åter!\n")
         print ("------------------------------") 
+
+        #Avsluta programmet
         break
 
 
