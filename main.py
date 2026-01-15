@@ -87,8 +87,8 @@ while True :
             print ("Välkommen åter!\n")
             print ("------------------------------") 
 
-        #Avsluta programmet
-        break
+            #Avsluta programmet
+            break
 
 
     #else
