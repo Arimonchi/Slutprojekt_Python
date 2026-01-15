@@ -27,13 +27,13 @@ while True :
     print("2. Visa totalbelopp")
     print("3. Betala och avsluta\n")
 
-    väl = input ("\nVälj ett altanativ 1, 2 eller 3 :")
+    val = input ("\nVälj ett altanativ 1, 2 eller 3 :")
  
     print ("------------------------------")
  
 
 #  1. Visa produkter och handla"
-    if väl == "1" :
+    if val == "1" :
         print ("\nVåra produkter👞\n") 
   
         for i in varor :
@@ -52,12 +52,12 @@ while True :
 
 
 #2. Visa totalbelopp
-    elif väl == "2" :
+    elif val == "2" :
         print ("\n💰Ditt totalbellop : ", total_price, "kr\n")
 
 
 #3. . Betala och avsluta  
-    elif väl == "3" :
+    elif val == "3" :
         print ("\n✨Tack för ditt köp!😀✨\n")
         print ("💰Ditt totalbelopp är ", total_price, " kr.\n")
         print ("Välkommen åter!\n")
