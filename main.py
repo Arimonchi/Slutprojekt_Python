@@ -19,36 +19,47 @@ total_price = 0
 
 #Meny
 while True :
-    print ("-----------------------------")
+    print ("------------------------------")
 
-    print ("\nVälkomen till e-butik!!☺️🛍️\n")
-    print("--- MENY ---\n")
+    print ("\nVälkomen till e-butik!!🛍️\n")
+    print("      --- MENY ---\n")
     print("1. Visa produkter och handla")
     print("2. Visa totalbelopp")
     print("3. Betala och avsluta\n")
 
+    print ("------------------------------")
+
     val = input ("\nVälj ett altanativ 1, 2 eller 3 :")
- 
+    print()
     print ("------------------------------")
  
 
 #  1. Visa produkter och handla"
     if val == "1" :
-        print ("\nVåra produkter👞\n") 
+        print ("\n   ---Våra produkter👞---\n") 
   
         for i in varor :
              print(i, varor[i]["Namn"], varor[i]["pris"], "kr")
+        print()
+        print ("------------------------------")
+        print()
+        #Add try except
+        try :
+            varnummer= int(input ("Ange varunummer du vill köpa:"))
+            print ()
         
-        varnummer= int(input ("Ange varunummer du vill köpa:"))
-        print ()
-        
-        if varnummer in varor :
-            total_price += varor[varnummer]["pris"]
-            print ("\nTack😁! Varan har lagts till i kundvagnen🛒✨\n")
+            if varnummer in varor :
+                total_price += varor[varnummer]["pris"]
+                print ("\nTack😁! Varan har lagts till i kundvagnen🛒✨\n")
  
-        else :
-            print ("\nNumret finns inte i tillgängliga varor.")
-            print ("Försök igen.\n")
+            else :
+                print ("\nNumret finns inte i tillgängliga varor.")
+                print ("Försök igen.\n")
+
+        except ValueError:
+            print ("------------------------------")
+            print("\nFel😭! ")
+            print("Du måste skriva en siffra från listan!\n")
 
 
 #2. Visa totalbelopp
@@ -61,14 +72,11 @@ while True :
         print ("\n✨Tack för ditt köp!😀✨\n")
         print ("💰Ditt totalbelopp är ", total_price, " kr.\n")
         print ("Välkommen åter!\n")
-        print ("----------------------------------------")
-
+        print ("------------------------------") 
         break
 
 
 #else
     else :
-        print ("----------------------------------------")
         print("\nFel😭! \n")
         print("\nVälj nummer 1,2 eller ３.\n")
-        print ("----------------------------------------")
