@@ -15,8 +15,19 @@ varor = {
     10: {"Namn": "Jeans", "pris": 980},
 }
 
+
+#Kod för att visa menyn
+def visa_varor():
+    print ("\n   ---Våra produkter👞---\n") 
+    #Hämtade information från ordboken med hjälp av for loop
+    #Automation istället att använda print 
+    for i in varor :
+        print (i, varor[i]["Namn"], varor[i]["pris"], "kr")
+      
+
 #Variabel för total belpop (Börja med 0 kr)
 total_price = 0
+
 
 #Huvdmeny
 #while loop : Håller systemet igång tills användaren avslutar
@@ -39,16 +50,9 @@ while True :
 
     # Val1 : Visa produkter och handla　
     if val == "1" :
-        print ("\n   ---Våra produkter👞---\n") 
-
-        #Hämtade information från ordboken med hjälp av for loop
-        #Automation istället att använda print 
-        for i in varor :
-             print(i, varor[i]["Namn"], varor[i]["pris"], "kr")
-        print()
-        print ("------------------------------")
-        print()
-
+        visa_varor()
+        print ()
+        
         #Add try except for att hantera ValueError
         try :
             varnummer= int(input ("Ange varunummer du vill köpa:"))
